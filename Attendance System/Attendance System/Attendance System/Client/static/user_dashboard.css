@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #4a90e2; /* A calming blue */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 24px;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.subjects {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.subjects li {
+    margin: 10px;
+}
+
+.subjects button {
+    background-color: #ffffff; /* White button */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px 20px;
+    font-size: 16px;
+    color: #4a90e2; /* Button text color matches header */
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.subjects button:hover {
+    background-color: #e6f7ff; /* Light blue on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+}
+
+footer a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

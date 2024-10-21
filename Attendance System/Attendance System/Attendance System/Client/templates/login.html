@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+  <div class="login-container">
+    <div class="form-section">
+      <form action="{{ url_for('login') }}" method="post" onsubmit="return validateLogin()">
+        <h2>Login</h2>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+        <p>First time here? <a href="{{ url_for('register') }}">Sign Up</a></p>
+      </form>
+    </div>
+  </div>
+  
+  <script>
+    function validateLogin() {
+        let email = document.getElementById("email").value;
+        let password = document.getElementById("password").value;
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        let hasLowercase = /[a-z]/.test(password);
+        let hasUppercase = /[A-Z]/.test(password);
+        let hasNumber = /\d/.test(password);
+        let hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+        let minLength = password.length >= 8;
+
+        if (!emailPattern.test(email)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+
+        if (!(hasLowercase && hasUppercase && hasNumber && hasSpecialChar && minLength)) {
+            alert("Password must be at least 8 characters long, with at least one lowercase letter, one uppercase letter, one number, and one special character.");
+            return false;
+        }
+
+        return true;  // If both email and password meet the criteria
+    }
+  </script>
+
+</body>
+</html>

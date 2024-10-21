@@ -1,0 +1,40 @@
+/* Styles for register page */
+body {
+  font-family: Arial, sans-serif;
+  background-image: url('https://bradydahmerdesign.com/wp-content/uploads/2019/01/1175863-cool-medical-desktop-backgrounds-1920x1080-for-full-hd-medical.jpg'); /* Replace with your background image URL */
+  background-size: cover; /* Cover the entire background */
+  background-position: center; /* Center the background image */
+  margin: 0;
+}
+
+.register-container {
+  width: 40%;
+  margin: 100px auto; /* Centering the container */
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Light border for contrast */
+  background-color: rgba(255, 255, 255, 0.8); /* White with some transparency */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px; /* Rounded input fields */
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4CAF50; /* Button color */
+  color: white;
+  border: none;
+  border-radius: 5px; /* Rounded corners for button */
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker shade on hover */
+}

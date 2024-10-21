@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prasad Institute Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admin_dashboard.css') }}">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/8999/8999099.png" alt="Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Dashboard</a></li>
+                    <li><a href="#">New Registration</a></li>  
+                    <li><a href="#">Attendance</a></li>        
+                    <li><a href="#">Student Master</a></li>
+                    <li><a href="#">Faculty Master</a></li>     
+                    <li><a href="#">Batch Master</a></li>
+                    <li><a href="#">Training Center</a></li>
+                    <li><a href="#">Holiday</a></li>
+                    <li><a href="#">Reports</a></li>
+                    <li><a href="#">Logout</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <header class="header">
+                <h1>Prasad Institute of Medical Science Dashboard</h1>
+                <p>Attendance Summary: 2024-10-13</p>
+            </header>
+
+            <section class="dashboard-cards">
+                </a>
+                <a href="#students" class="card blue">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8999/8999113.png" alt="Student Icon" class="card-icon">
+                    <h2>Total Students</h2>
+                    <p>7</p>
+                    <span>View Details</span>
+                </a>
+                <a href="#faculty" class="card lavender">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8999/8999114.png" alt="Faculty Icon" class="card-icon">
+                    <h2>Total Faculty</h2>
+                    <p>5</p>
+                    <span>View Details</span>
+                </a>
+                <a href="#departments" class="card orange-light">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8999/8999116.png" alt="Course Icon" class="card-icon">
+                    <h2>Total Departments</h2>
+                    <p>6</p>
+                    <span>View Details</span>
+                </a>
+                <a href="#courses" class="card yellow">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8999/8999117.png" alt="Department Icon" class="card-icon">
+                    <h2>Total Courses</h2>
+                    <p>4</p>
+                    <span>View Details</span>
+                </a>
+                <a href="#upcoming-events" class="card blue-light">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8999/8999118.png" alt="Events Icon" class="card-icon">
+                    <h2>Upcoming Events</h2>
+                    <p>2</p>
+                    <span>View Details</span>
+                </a>
+                <a href="#completed-courses" class="card pink-light">
+                    <img src="https://cdn-icons-png.flaticon.com/512/8999/8999119.png" alt="Completed Icon" class="card-icon">
+                    <h2>Completed Courses</h2>
+                    <p>10</p>
+                    <span>View Details</span>
+                </a>
+            </section>
+
+            <section class="batch-registration">
+                <h2>Batches Registration:</h2>
+                <div class="batch-info">
+                    <a href="#total-batches" class="info-box">
+                        <img src="https://cdn-icons-png.flaticon.com/512/8999/8999120.png" alt="Total Icon">
+                        <p>Total</p>
+                        <p>3</p>
+                    </a>
+                    <a href="#batch-schedule" class="info-box">
+                        <img src="https://cdn-icons-png.flaticon.com/512/8999/8999121.png" alt="Batch Schedule Icon">
+                        <p>Batch Schedule</p>
+                        <p>5</p>
+                    </a>
+                    <a href="#completed-batches" class="info-box">
+                        <img src="https://cdn-icons-png.flaticon.com/512/8999/8999122.png" alt="Completed Icon">
+                        <p>Completed</p>
+                        <p>5</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

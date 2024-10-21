@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='user_dashboard.css') }}">
+</head>
+<body>
+  <header>
+    <h1>User Dashboard</h1>
+  </header>
+  <main>
+    <h2>Select a Subject:</h2>
+    <ul class="subjects">
+      <li><button>Pharmacology</button></li>
+      <li><button>Pharmaceutical Chemistry</button></li>
+      <li><button>Pharmaceutics</button></li>
+      <li><button>Pharmacokinetics</button></li>
+      <li><button>Toxicology</button></li>
+      <li><button>Biopharmaceutics</button></li>
+      <li><button>Medicinal Chemistry</button></li>
+    </ul>
+  </main>
+  <footer>
+    <a href="{{ url_for('index') }}">Logout</a>
+  </footer>
+</body>
+</html>

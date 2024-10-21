@@ -1,0 +1,107 @@
+/* Global Styles */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e0e0e0; /* Light gray background for a clean look */
+}
+
+/* Login Container */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px; /* Max width for larger screens */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Form Section */
+.form-section {
+  width: 400px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.9); /* Transparent white background */
+  border-radius: 12px; /* Slightly more rounded corners for modern look */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Softer shadow for depth */
+  backdrop-filter: blur(10px); /* Blurred background effect for a polished look */
+  transition: all 0.3s ease-in-out;
+}
+
+.form-section:hover {
+  transform: scale(1.02); /* Slight scaling effect on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Heading */
+h2 {
+  text-align: center;
+  color: #222; /* Slightly darker for better contrast */
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+/* Input Fields */
+input {
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px; /* Increased padding for better touch targets */
+  border: 1px solid rgba(200, 200, 200, 0.7); /* Softer border color */
+  border-radius: 8px; /* More rounded input fields */
+  font-size: 16px;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent input background */
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+input:focus {
+  border-color: #4CAF50; /* Green border on focus */
+  background-color: rgba(255, 255, 255, 1); /* Solid background on focus */
+  outline: none;
+}
+
+/* Login Button */
+button {
+  width: 100%;
+  padding: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  background-color: #45a049; /* Darker shade on hover */
+  transform: translateY(-3px); /* Slight lift effect */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Shadow on hover for button */
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888; /* Subtle gray for footer text */
+}
+
+footer a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  .form-section {
+    width: 90%;
+    padding: 20px;
+  }
+}

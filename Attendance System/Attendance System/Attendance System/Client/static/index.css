@@ -1,0 +1,107 @@
+/* General page setup */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f0f4f7; /* Light grey background for a clean look */
+}
+
+/* Header Styles */
+.header {
+  padding: 15px; /* Add padding to the header */
+  text-align: center; /* Center the header text */
+  background-color: #00796b; /* Dark teal background for the header */
+  color: white; /* White text color */
+}
+
+/* Split container for image and content */
+.split-container {
+  display: flex;
+  height: calc(100vh - 160px); /* Full height minus header and footer */
+}
+
+/* Left half for image */
+.left-half {
+  flex: 1; /* Take half of the available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0f2f1; /* Light background for contrast */
+}
+
+/* Image styling */
+.image {
+  max-width: 90%; /* Responsive image */
+  height: auto;
+}
+
+/* Right half for content */
+.right-half {
+  flex: 1; /* Take half of the available space */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack elements vertically */
+  padding: 20px; /* Add padding */
+  text-align: center;
+}
+
+/* Footer Styles */
+.footer {
+  text-align: center;
+  padding: 10px; /* Add padding to the footer */
+  background-color: #00796b; /* Dark teal background for the footer */
+  color: white; /* White text color */
+}
+
+/* Existing login styles (if you need to re-add them, just copy-paste from your previous CSS) */
+.login-section {
+  width: 350px; /* Adjusted width */
+  padding: 20px;
+  background-color: #ffffff; /* White background for the login section */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  text-align: center;
+}
+
+/* Centering the heading */
+.centered-heading {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Centering the login section */
+.centered {
+  margin: 0 auto;
+}
+
+/* Login heading with larger icon */
+.login-heading {
+  margin-bottom: 20px;
+  color: #00796b; /* Dark teal for the heading */
+  font-size: 2rem;
+}
+
+/* Icon and login text color change */
+.login-heading .fas {
+  color: #00796b; /* Matching color for the icon */
+  margin-right: 10px;
+  font-size: 2.5rem; /* Larger icon size */
+}
+
+/* Link button styles */
+.login-section a {
+  display: block;
+  margin: 10px 0;
+  padding: 12px; /* Slightly larger padding */
+  background-color: #4CAF50; /* Green background for buttons */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold; /* Bold font for links */
+}
+
+/* Hover effect for links */
+.login-section a:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
