@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enrollment</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='enrollment.css') }}">
+</head>
+<body>
+  <header>
+    <h1>Enrollment for {{ subject }}</h1>
+  </header>
+  <main>
+    <form action="{{ url_for('enrollment', subject=subject) }}" method="POST">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      <br>
+      <input type="hidden" name="subject" value="{{ subject }}">
+      <button type="submit">Enroll</button>
+    </form>
+  </main>
+  <footer>
+    <a href="{{ url_for('index') }}">Logout</a>
+  </footer>
+</body>
+</html>

@@ -13,13 +13,13 @@
   <main>
     <h2>Select a Subject:</h2>
     <ul class="subjects">
-      <li><button>Pharmacology</button></li>
-      <li><button>Pharmaceutical Chemistry</button></li>
-      <li><button>Pharmaceutics</button></li>
-      <li><button>Pharmacokinetics</button></li>
-      <li><button>Toxicology</button></li>
-      <li><button>Biopharmaceutics</button></li>
-      <li><button>Medicinal Chemistry</button></li>
+      <li><a href="{{ url_for('enrollment', subject='Pharmacology') }}"><button>Pharmacology</button></a></li>
+      <li><a href="{{ url_for('enrollment', subject='Pharmaceutical Chemistry') }}"><button>Pharmaceutical Chemistry</button></a></li>
+      <li><a href="{{ url_for('enrollment', subject='Pharmaceutics') }}"><button>Pharmaceutics</button></a></li>
+      <li><a href="{{ url_for('enrollment', subject='Pharmacokinetics') }}"><button>Pharmacokinetics</button></a></li>
+      <li><a href="{{ url_for('enrollment', subject='Toxicology') }}"><button>Toxicology</button></a></li>
+      <li><a href="{{ url_for('enrollment', subject='Biopharmaceutics') }}"><button>Biopharmaceutics</button></a></li>
+      <li><a href="{{ url_for('enrollment', subject='Medicinal Chemistry') }}"><button>Medicinal Chemistry</button></a></li>
     </ul>
   </main>
   <footer>

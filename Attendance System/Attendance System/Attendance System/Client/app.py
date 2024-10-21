@@ -1,7 +1,12 @@
 from flask import Flask, render_template, redirect, url_for, request
+from flask import Flask, render_template, redirect, url_for, request, flash
+
 import re  # Import regex module for password validation
+import csv
+import os 
 
 app = Flask(__name__)
+app.secret_key = '123456789' 
 
 # Route for landing page (index.html)
 @app.route('/')
@@ -53,6 +58,32 @@ def register():
         # Handle user registration logic here
         return redirect(url_for('admin_login'))
     return render_template('register.html')
+
+# add for enrollment page
+@app.route('/enrollment/<subject>', methods=['GET', 'POST'])
+def enrollment(subject):
+    if request.method == 'POST':
+        username = request.form['username']
+        password = request.form['password']
+
+        # Save the enrollment data to a CSV file
+        csv_file_path = 'static/enrollment_data.csv'  # Update the path to the static folder
+        file_exists = os.path.isfile(csv_file_path)  # Check if the file already exists
+
+        # Write to the CSV file
+        with open(csv_file_path, mode='a', newline='') as csv_file:
+            fieldnames = ['Username', 'Password', 'Subject']  # Define the field names
+            writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
+
+            if not file_exists:
+                writer.writeheader()  # Write header only if the file is new
+            writer.writerow({'Username': username, 'Password': password, 'Subject': subject})
+
+        flash(f'Enrollment successful for {subject}!')
+        return redirect(url_for('user_dashboard'))  # Redirect to user dashboard or another page
+
+    return render_template('enrollment.html', subject=subject)
+
 
 if __name__ == '__main__':
     app.run(debug=True)
