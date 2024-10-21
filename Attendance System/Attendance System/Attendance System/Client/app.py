@@ -20,20 +20,6 @@ def is_valid_password(password):
         return True
     return False
 
-# Route for user login (login.html)
-@app.route('/login', methods=['GET', 'POST'])
-def login():
-    if request.method == 'POST':
-        email = request.form['email']
-        password = request.form['password']
-        # Check if the email is a valid Gmail address
-        if email.endswith('@gmail.com') and is_valid_password(password):
-            return redirect(url_for('user_dashboard'))  # Redirect to user dashboard
-        else:
-            # If login fails, redirect back to the login
-            return redirect(url_for('login'))  # Stay on user login page if invalid credentials
-    return render_template('login.html')
-
 # Route for admin login (admin_login.html)
 @app.route('/admin_login', methods=['GET', 'POST'])
 def admin_login():
@@ -65,7 +51,7 @@ def admin_dashboard():
 def register():
     if request.method == 'POST':
         # Handle user registration logic here
-        return redirect(url_for('login'))
+        return redirect(url_for('admin_login'))
     return render_template('register.html')
 
 if __name__ == '__main__':
